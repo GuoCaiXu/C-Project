@@ -3,32 +3,30 @@ using namespace std;
 
 int main() {
 
-	int a1[100][100], n;
-
-	int j;
+	int n, num, a = 1;
+	int num1 = 2, num2 = 1, sum = 1, temp = 2;
 
 	while (cin >> n) {
 
-		int num = n;
-		int sum1 = 2, sum2 = 1;
+		num = n;
 
-		a1[0][0] = 1;
 		for (int i = 0; i < n;) {
 
-			for (j = 0; j < num; j++) {
+			for (int j = 0; j < num; j++) {
 
-				cout << a1[i][j] << " ";
-				a1[i][j + 1] = a1[i][j] + sum1;
-				sum1++;
+				cout << a << " ";
+				a += num1;
+				num1 += num2;
+
 			}
-			cout << endl;
-			j = 0;
 			i++;
 			num--;
-			a1[i][j] = a1[i - 1][j] + sum2;
-			sum2++;
+			cout << endl;
+			sum += i;
+			a = sum;
+			temp++;
+			num1 = temp;
 		}
-
 	}
 
 	return 0;
