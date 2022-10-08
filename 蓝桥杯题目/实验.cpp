@@ -4,31 +4,15 @@ using namespace std;
 
 int main() {
 
-	int N, count = 1;
+	int arr[5][5];
 
-	cin >> N;
+	arr[1][0] = 1;
 
-	vector<vector<int>>matrix(N, vector<int>(N, 0));
+	for (int i = 0; i < 25; i++) {
 
-	/*for (int i = 0; i < N; i++) {
-
-		for (int j = i; j >= 0; --j) {
-			matrix[j][i - j] = count++;
-		}
-		cout << endl;
-	}*/
-
-	matrix[1][0] = 1;
-
-	for (auto i : matrix) {
-
-		for (auto j : i) {
-
-				cout << j << " ";
-		}
-
-		cout << endl;
+		cout << arr[i] << " ";
 	}
+	cout << endl;
 
 	return 0;
 }
