@@ -8,8 +8,12 @@ int main() {
 
 	cin >> a >> b;
 
-	if (a.size() < b.size()) for (int i = 0; i < b.size(); i++) a[i] = b[i];
-	cnt++;
+	if (a.size() < b.size()) {
+		for (int i = 0; i < b.size(); i++) {
+			a[i] = b[i]; cnt++;
+
+		}
+	}
 	
 	for (int i = 0; i < a.size(); i++) {
 		if (a[i] != b[i] && a[i + 1] == b[i + 1]) {
