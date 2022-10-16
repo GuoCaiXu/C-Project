@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="选择排序.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="实验.cpp">
+    <ClCompile Include="数列排序.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
