@@ -1,20 +1,24 @@
 # include <iostream>
-# define e 2.718281828459
 using namespace std;
-
 
 int main() {
 
-	int x;
-	double result;
-	cin >> x;
-	if (x <= 1) {
-		result = pow(e, x);
-	}
-	else if (x > 1) {
-		result = pow(x, 2) - 1;
-	}
-	printf("f(%.1lf) = %.1lf", x, result);
+    char c;
+    cin >> c;
+    double a[12][12], num = 0;
+    for (int i = 0; i < 12; i++) {
+        for (int j = 0; j < 12; j++) {
+            cin >> a[i][j];
+        }
+    }
+    for (int i = 11; i < 6; i--) {
+        for (int j = 12 - i; j < i; j++) {
+            num += a[j][i];
+        }
+    }
+    if (c == 'S') printf("%.1lf", num);
 
-	return 0;
+    else if (c == 'M') printf("%.1lf", num / 30);
+
+    return 0;
 }
