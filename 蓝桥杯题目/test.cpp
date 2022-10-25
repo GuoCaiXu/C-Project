@@ -17,17 +17,17 @@ public:
 
 
 	//重载前置++运算符  返回引用为了一直对一个数据进行操作
-	MyInteger & operator++() {
+	MyInteger& operator++() {
 
 		//先进行++运算
 		m_Num++;
-		
+
 		//再将自身做返回
 		return *this;
 	}
 
 	//重载后置++运算符
-	MyInteger operator++(int) {  //int 是占位参数， 可以用于区分前置和后置递增
+	MyInteger& operator++(int) {  //int 是占位参数， 可以用于区分前置和后置递增
 
 		//先 记录当时结果
 		MyInteger temp = *this;
@@ -42,7 +42,7 @@ private:
 };
 
 //重载<<运算符
-ostream& operator<<(ostream &cout, MyInteger &myint) {
+ostream& operator<<(ostream& cout, MyInteger& myint) {
 
 	cout << myint.m_Num;
 
@@ -67,7 +67,7 @@ void test02() {
 
 int main() {
 
-//test01();
+	//test01();
 	test02();
 
 	system("pause");
