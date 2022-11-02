@@ -1,28 +1,18 @@
 # include <iostream>
-# include <algorithm>
+# include <string>
 
 using namespace std;
 
 int main() {
 
-	string a, b;
-	cin >> a >> b;
-	if (a.size() < b.size()) swap(a, b);
+	string s = "abc";
+	string s1 = "abb";
+	string s2 = "aab";
+	string s3 = "abb";
 
-	for (int i = 0; i < a.size(); i++) {
-		a = a.substr(1) + a[0];
-		for (int j = 0; j + b.size() < a.size(); j++) {
-			int k = 0;
-			for (; k < b.size(); k++)
-				if (a[j + k] != b[k])
-					break;
-				if (k == b.size()) {
-					puts("true");
-					return 0;
-				}
-		}
-	}
-	puts("false");
+	cout << s.compare(s1) << endl;     // s > s1
+	cout << s2.compare(s1) << endl;    // s2 < s1
+	cout << s3.compare(s1) << endl;    // s3 = s1
 
 	return 0;
 }
